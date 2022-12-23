@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static String calculateBMI(double weight, double height) {
+
+        double bmi = weight / (height * height);
+
+        if (bmi <= 18.5) {
+            return "Underweight";
+        }
+        else if (bmi <= 25) {
+            return "Normal";
+        }
+        else if (bmi <= 30) {
+            return "Overweight";
+        }
+        else {
+            return "Obese";
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Input your height (m): ");
+        Scanner height = new Scanner(System.in);
+        double userHeight = height.nextDouble();
+
+        System.out.println("Input your weight (kg): ");
+        Scanner weight = new Scanner(System.in);
+        double userWeight = weight.nextDouble();
+
+        System.out.println("Calculating your BMI!!!");
+
+
+        System.out.println(calculateBMI(userWeight, userHeight));
+
+    }
+}
